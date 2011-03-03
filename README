@@ -1,0 +1,10 @@
+--------------
+Milage Logger
+--------------
+Author: Isaac Liu
+
+This was a quick project put together to help my wife log her milage for work. It uses purely haml and sass without any framework to setup the page layout. It uses jquery ui for the styling and jquery for the interaction. The site allows users to input schools, and calculates the milage from school to school and sums it up. The milage source is from a google spreadsheet that is parsed when the page is loaded. 
+
+To build the page, run make. Haml and Sass must be installed. 
+
+The src folder contains the haml and sass source files. The js folder contains the javascripts. 
