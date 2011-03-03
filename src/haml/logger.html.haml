@@ -2,16 +2,14 @@
 
 #trip_input.blob.ui-state-hover.ui-corner-all
   %span.labels
-    %label{:for => "school_from"} From:
-  %input#source.schools
-  %br
-  %span.labels
-    %label{:for => "school_to"} To:
-  %input#destination.schools
+    %label{:for => "school"} School: 
+  %select#source.schools
   %br
   .right
-    %button#add_button Add     
- 
+    %button#add_button Add
+    
+#scratch    
+    
 .blob.ui-state-hover.ui-corner-all
   %table#trip_list
     %thead

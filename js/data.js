@@ -1,26 +1,9 @@
 /**
  * @author liuisaac
+ * Note: Requires Jquery
+ * Link: http://spreadsheets.google.com/feeds/cells/0Au7rq5Ie3aF6dFBidzR3NVo3YXhxQTg1QXJRTUY4SVE/od6/public/basic?alt=json-in-script&callback=myFunc
  */
-var schools = [
-			"Kennedy",
-			"Grimmer",
-			"Alvarado",
-			"American",
-			"Kitayama",
-			"Hillview",
-			"Shilling",
-			"AES",
-			"Parkmont",
-			"Logan",
-			"Glenmoor",
-			"Walters",
-			"Searles",
-			"Azeveda",
-			"Hirsch",
-			"D.O.",
-			"Bunker",
-			"CSB"
-		];
+
 /* **
  * Table of distances
  *			Kenn	Grim	Alvar	Ameri	Kita	Hill	Shil	aes		park	logan	glen	walters		searles		aze		hirsch		D.O.	Bunker	CSB	            	
@@ -78,7 +61,7 @@ var distances = [
 //D.O.
 [-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,		-1.0,		-1.0,	-1.0,		0.0, 	-1.0,	-1.0],
 //Bunker
-[-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	5.79,	-1.0,	-1.0,		-1.0,		-1.0,	-1.0,		-1.0, 	0.0,	-1.0]
+[-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	5.79,	-1.0,	-1.0,		-1.0,		-1.0,	-1.0,		-1.0, 	0.0,	-1.0],
 //CSB
 [-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,	-1.0,		-1.0,		-1.0,	-1.0,		-1.0, 	-1.0,	0.0]
 ];
