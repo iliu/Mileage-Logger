@@ -102,7 +102,18 @@ $(function(){
         }
     }).click(function(){
         // Add a row to the table and update total miles
-        schoolNum = schools.indexOf($("#source").val());
+		chosenSchool = $("#source").val();
+		if (chosenSchool == "") {
+			alert("Please select a school before clicking add!");
+			reset_form();
+			return false;
+		}
+        schoolNum = schools.indexOf(chosenSchool);
+		if (schoolNum == lastDest) {
+			alert("Please choose the next school.");
+			reset_form();
+			return false;
+		}
         if (lastDest != -1) {
             if (numSchools == 1) {
                 // Remove the first row inserted
