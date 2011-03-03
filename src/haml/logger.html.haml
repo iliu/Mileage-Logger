@@ -2,14 +2,16 @@
 
 #trip_input.blob.ui-state-hover.ui-corner-all
   %span.labels
-    %label{:for => "school"} School: 
+    %label{:for => "school"} School:
   %select#source.schools
     %option{:val => ""}
   %br
   .right
     %button#add_button Add
     
-#scratch    
+.blob.ui-state-hover.ui-corner-all
+  Previous School:
+  %span#prev_school
     
 .blob.ui-state-hover.ui-corner-all
   %table#trip_list

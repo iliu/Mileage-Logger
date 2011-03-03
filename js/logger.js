@@ -21,6 +21,7 @@ function updateTotalMiles (miles) {
 
 function reset_trips (){
 	$("#trip_list tbody").html('');	
+	$("#prev_school").html("");
 	numSchools = 0;
 	lastDest = -1;			
 }
@@ -127,6 +128,7 @@ $(function(){
             // First school without destination yet
             addStartSchool(schools[schoolNum]);
         }
+		$("#prev_school").html(chosenSchool);
         reset_form();
         lastDest = schoolNum;
         numSchools += 1;
