@@ -7,4 +7,4 @@ This was a quick project put together to help my wife log her milage for work. I
 
 To build the page, run make. Haml and Sass must be installed. 
 
-The src folder contains the haml and sass source files. The js folder contains the javascripts. 
+The src folder contains the haml and sass source files. The js folder contains the javascripts. The css folder contains jquery-ui css and a compiled css from sass
