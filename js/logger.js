@@ -3,18 +3,14 @@
  * @author liuisaac
  * 
  * This is a the javascript that manages the calculation of milages
+ * NOTE: Include data.js before this file in the HTML
  */
 
 var total_miles = 0;
-var schools = [
-			"Kennedy",
-			"Azeveda"
-		];
-
 
 function updateTotalMiles (miles) {
 	total_miles += miles;
-	$("#total_miles").html(total_miles.toString());
+	$("#total_miles").html(total_miles.toFixed(2));
 }
 
 function reset_trips (){
@@ -39,7 +35,7 @@ function addTrip (source, destination, miles) {
 	$(bRemove).button({
 	icons: { secondary: "ui-icon-close" }, text: false
 		}).click(function() {
-			updateTotalMiles(-3.5);
+			updateTotalMiles(-miles);
 			$(this).parent().parent().remove();
 		});
 	cButton.appendChild(bRemove);
@@ -64,9 +60,9 @@ function reset_form() {
 		icons: { secondary: "ui-icon-plusthick"}
 		}).click( function () {
 			// Add a row to the table and update total miles
-			tMiles = 3.5;
 			tSource = $("#source").val();
 			tDest = $("#destination").val();
+			tMiles = distances[schools.indexOf(tSource)][schools.indexOf(tDest)];
 			if (tSource != "" && tDest != "") {
 				addTrip(tSource,tDest, tMiles);
 				updateTotalMiles(tMiles); 
