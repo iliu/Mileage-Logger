@@ -91,9 +91,10 @@ $(function(){
     			schools[i] = json.feed.entry[i].title.$t;
 				$("select#source").append("<option value='"+schools[i]+"'>"+schools[i]+"</option>"); 
 				var dist = json.feed.entry[i].content.$t.split(',');
-				distances[i] = new Array();
+				distances[i] = {};
 				for (var j = 0; j < dist.length ; j++){
-					distances[i][j] = parseFloat(dist[j].split(':')[1]);
+          school = $.trim(dist[j].split(':')[0].toLowerCase())
+					distances[i][school] = parseFloat(dist[j].split(':')[1]);
 				}
 	        }
     });
@@ -120,7 +121,7 @@ $(function(){
                 // Remove the first row inserted
                 $("#trip_list tbody").html('');
             }
-            tMiles = distances[lastDest][schoolNum];
+            tMiles = distances[lastDest][$.trim(chosenSchool.toLowerCase())];
             addTrip(schools[lastDest], schools[schoolNum], tMiles);
             updateTotalMiles(tMiles);
         }
